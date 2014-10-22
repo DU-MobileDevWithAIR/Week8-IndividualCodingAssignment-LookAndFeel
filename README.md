@@ -1,4 +1,4 @@
-Week8-IndividualCodingAssignment-Multimedia-Multiuser
+Week9-IndividualCodingAssignment-LookAndFeel
 =====================================================
 
-Starter repo for Week8 IndividualCodingAssignment Multimedia/Multiuser
+Starter repo for Week8 IndividualCodingAssignment Look And Feel
