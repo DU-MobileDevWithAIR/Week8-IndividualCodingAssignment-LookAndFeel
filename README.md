@@ -1,4 +1,4 @@
 Week8-IndividualCodingAssignment-LookAndFeel
 =====================================================
 
-Starter repo for Week8 IndividualCodingAssignment Look And Feel
+Starter repo for Week 8 - IndividualCodingAssignment - Look And Feel
