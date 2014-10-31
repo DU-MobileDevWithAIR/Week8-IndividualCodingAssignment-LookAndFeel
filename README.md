@@ -14,6 +14,10 @@ IntelliJ Module Details
 * Main MXML File = src\HelloWorldMain.mxml
 * Application Descriptor = HelloWorldMain-app.xml
 
+Library Dependencies
+* * *
+
+* libs/FlatSparkSkin.swc
 
 Android and iOS Files and Folders to package
 * * *
