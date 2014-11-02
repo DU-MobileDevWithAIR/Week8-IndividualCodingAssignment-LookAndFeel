@@ -136,9 +136,13 @@
         ]]>
     </fx:Script>
 
-    <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 -->
-
     <fx:Declarations>
+        <s:MultiDPIBitmapSource id="helloIconSource"
+         source160dpi="assets/images/icons/HelloIcon160.png"
+         source240dpi="assets/images/icons/HelloIcon240.png"
+         source320dpi="assets/images/icons/HelloIcon320.png"/>
+
+
         <s:RadioButtonGroup id="genderRBGroup"/>
 
         <popups:HelloWorldAppPopup id="messagingPopup"
@@ -156,6 +160,16 @@
     </s:states>
 
 
+    <!--After looking at examples and students work, I felt Kendra did a great job on this. Code used from Kendra 11/01/12-->
+    <s:titleContent>
+        <s:Image
+               source="{ helloIconSource }"
+               horizontalAlign="center"
+               top="20"
+               height="320" width="320"/>
+    </s:titleContent>
+
+
     <s:layout>
         <s:VerticalLayout paddingTop="20" paddingBottom="20"
             paddingLeft="20" paddingRight="20"/>
@@ -170,6 +184,7 @@
                      text.login="Login"
                      text.register="Create an Account"
                      fontSize="42"
+                     styleName="Heading"
                      paddingLeft="100"
                      paddingBottom="20"/>
 
@@ -218,7 +233,9 @@
             <s:HGroup id="termsAndCond"
                       includeIn="register">
                 <s:CheckBox id="agreeToTerms_chk"/>
-                <s:Label text="agree to terms *"/>
+                <s:Label text="agree to terms *"
+                styleName="Heading"
+                        />
             </s:HGroup>
 
             <s:Button id="submit_btn"
@@ -227,6 +244,7 @@
 
             <s:Label id="loginOrRegisterToggle"
                 text.login="Create Account"
+                styleName="Heading"
                 text.register="Log In"
                 buttonMode="true" mouseChildren="false"
                 click="_onLoginOrRegisterToggleClick( event )"/>

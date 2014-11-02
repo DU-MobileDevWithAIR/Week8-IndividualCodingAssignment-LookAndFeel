@@ -5,19 +5,25 @@
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
     title="Hello World!"
+
+
+    applicationDPI="320"
+     splashScreenImage="@Embed('/assets/images/lorempixel-1.jpg')"
+     splashScreenScaleMode="none"
+     splashScreenMinimumDisplayTime="5000"
+
+
     applicationComplete="_onApplicationComplete( event )">
-    <!-- TODO: Set the applicationDPI to 320 -->
-    <!-- TODO: Implement a Splashscreen Image -->
 
-    <!-- TODO: Use an <fx:Style/> tag to reference /assets/styles/main.css -->
 
+    <fx:Style source="assets/styles/main.css"/>
     <fx:Script>
         <![CDATA[
         import edu.du.mobile.control.events.VenueDataEvent;
         import edu.du.mobile.control.events.NavigationEvent;
         import edu.du.mobile.model.AppModel;
         import edu.du.mobile.model.constants.ApplicationScreens;
-        import edu.du.mobile.model.vo.User;
+        import edu.du.mobile.model.vo.User
         import edu.du.mobile.model.vo.Venue;
         import edu.du.mobile.view.LocationDetailsView;
         import edu.du.mobile.view.LocationFeedListView;
