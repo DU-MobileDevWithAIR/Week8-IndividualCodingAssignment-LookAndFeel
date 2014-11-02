@@ -1,7 +1,49 @@
 @namespace s "library://ns.adobe.com/flex/spark";
-/* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+/* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app Done*/
 
-/* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+@font-face {
+    font-family: "comfortaaReg";
+    src: url("/assets/fonts/Comfortaa-Regular.ttf");
+    embedAsCFF: false;
+}
 
-/* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
-/* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+@font-face {
+    src: url("/assets/fonts/Comfortaa-Regular.ttf");
+    font-family: "comfortaaRegCFF";
+    embedAsCFF: true;
+}
+
+@font-face {
+    font-family: "comfortaaBold";
+    src: url("/assets/fonts/Comfortaa-Bold.ttf");
+    embedAsCFF: false;
+}
+
+@font-face {
+    src: url("/assets/fonts/Comfortaa-Bold.ttf");
+    font-family: "comfortaaBoldCFF";
+    embedAsCFF: true;
+}
+
+s|List {
+    fontFamily: "comfortaaBoldCFF";
+}
+
+s|Label {
+    fontFamily: "comfortaaReg";
+}
+/* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee Done*/
+.titleStyle {
+    fontFamily: "comfortaaBold";
+    fontSize: 50;
+    color: #9370db;
+}
+/* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html Done*/
+/* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark Done */
+s|Button {
+    skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
+
+s|CheckBox {
+    skinClass: ClassReference("flatSpark.skins.CheckBoxSkin")
+}

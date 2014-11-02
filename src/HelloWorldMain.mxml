@@ -4,13 +4,17 @@
 -->
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
+    applicationDPI="320"
+    splashScreenImage="@Embed('/assets/images/SloganDesign_KGeromi_i.jpg')"
+    splashScreenScaleMode="none"
+    splashScreenMinimumDisplayTime="5000"
     title="Hello World!"
     applicationComplete="_onApplicationComplete( event )">
-    <!-- TODO: Set the applicationDPI to 320 -->
-    <!-- TODO: Implement a Splashscreen Image -->
+    <!-- TODO: Set the applicationDPI to 320 Done -->
+    <!-- TODO: Implement a Splashscreen Image Done-->
 
-    <!-- TODO: Use an <fx:Style/> tag to reference /assets/styles/main.css -->
-
+    <!-- TODO: Use an <fx:Style/> tag to reference /assets/styles/main.css Done-->
+    <fx:Style source="assets/styles/main.css"/>
     <fx:Script>
         <![CDATA[
         import edu.du.mobile.control.events.VenueDataEvent;
@@ -154,5 +158,7 @@
            fault="_onServiceFault( event )"
            showBusyCursor="true" />
     </fx:Declarations>
+
+
 
 </s:ViewNavigatorApplication>

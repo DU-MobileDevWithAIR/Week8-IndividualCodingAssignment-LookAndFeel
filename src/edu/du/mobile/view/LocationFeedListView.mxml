@@ -38,7 +38,8 @@
 
     <s:HGroup>
         <s:Label text="Nearby Locations"
-            paddingLeft="125"/>
+            paddingLeft="125"
+            styleName="titleStyle"/>
         <s:Label text="Done"
             fontSize="18"
             color="blue"

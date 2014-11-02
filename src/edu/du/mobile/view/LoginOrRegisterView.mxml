@@ -136,9 +136,12 @@
         ]]>
     </fx:Script>
 
-    <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 -->
-
+    <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 Done-->
     <fx:Declarations>
+        <s:MultiDPIBitmapSource id="helloIconSource"
+                                source160dpi="assets/images/icons/HelloIcon160.png"
+                                source240dpi="assets/images/icons/HelloIcon240.png"
+                                source320dpi="assets/images/icons/HelloIcon320.png"/>
         <s:RadioButtonGroup id="genderRBGroup"/>
 
         <popups:HelloWorldAppPopup id="messagingPopup"
@@ -150,11 +153,21 @@
     </fx:Declarations>
 
 
+
     <s:states>
         <s:State name="login"/>
         <s:State name="register"/>
     </s:states>
 
+
+    <s:titleContent>
+
+        <s:Image
+                source="{ helloIconSource }"
+                horizontalAlign="center"
+                top="20"
+                height="320" width="320"/>
+    </s:titleContent>
 
     <s:layout>
         <s:VerticalLayout paddingTop="20" paddingBottom="20"
@@ -164,6 +177,7 @@
     <s:Scroller height="100%" width="100%"
         top="20" left="20" right="20">
 
+
         <s:VGroup id="accountForm">
 
             <s:Label id="accountFormHeader"
@@ -171,7 +185,8 @@
                      text.register="Create an Account"
                      fontSize="42"
                      paddingLeft="100"
-                     paddingBottom="20"/>
+                     paddingBottom="20"
+                     styleName="titleStyle"/>
 
             <s:Label text="Username or email"
                 includeIn="login"/>
@@ -229,6 +244,7 @@
                 text.login="Create Account"
                 text.register="Log In"
                 buttonMode="true" mouseChildren="false"
+                styleName="titleStyle"
                 click="_onLoginOrRegisterToggleClick( event )"/>
 
         </s:VGroup>

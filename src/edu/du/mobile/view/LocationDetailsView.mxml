@@ -60,7 +60,8 @@
         <s:VGroup >
 
             <s:Label text="{ _venue.name }"
-                     width="80%"/>
+                     width="80%"
+                    styleName="titleStyle"/>
 
             <s:HGroup>
                 <s:Label text="Map"
