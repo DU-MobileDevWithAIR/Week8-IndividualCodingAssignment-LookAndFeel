@@ -1,7 +1,22 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 /* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+@font-face {
+    src: url("/assets/fonts/Monofett.ttf");
+    fontFamily: "monofett";
+    embedAsCFF: true;
+}
 
+s|Label {
+    fontFamily: "monofett";
+}
 /* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+.redBox {
+    backgroundColor: #1e90ff;
+    paddingRight: 25px;
 
+}
 /* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
 /* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+s|Button {
+    skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
