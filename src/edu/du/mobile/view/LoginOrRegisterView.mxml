@@ -4,18 +4,23 @@
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark"
-        xmlns:popups="edu.du.mobile.view.popups.*" xmlns:mx="library://ns.adobe.com/flex/mx"
-        currentState="register">
+        xmlns:popups="edu.du.mobile.view.popups.*"
+        xmlns:mx="library://ns.adobe.com/flex/mx"
+        xmlns:components="flatSpark.components.*"
+        currentState="register"
+        >
 
     <fx:Script>
         <![CDATA[
+
         import edu.du.mobile.control.events.NavigationEvent;
         import edu.du.mobile.model.AppModel;
         import edu.du.mobile.model.constants.ApplicationScreens;
         import edu.du.mobile.model.vo.User;
-
+        import flatSpark.enums.BrandColorEnum;
+        import flatSpark.enums.ButtonSizeEnum;
+        import flatSpark.utils.AwesomeUtils;
         import mx.events.ValidationResultEvent;
-
         import mx.managers.PopUpManager;
 
             public static const VIEW_STATE_LOGIN:String = "login";
@@ -136,7 +141,23 @@
         ]]>
     </fx:Script>
 
-    <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 -->
+    <!-- TO-DONE: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320
+    PNG in an Image in the Title Content area of the ActionBar:
+    http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c3
+    9bd7e9fc3644ff0b73e12a57855b9c-8000 -->
+    <s:titleContent>
+        <s:Image id="helloIconImage" maxHeight="50" maxWidth="50" left="0">
+            <!--Without a max width/height, this was way too big in emulation -->
+            <s:source>
+                <s:MultiDPIBitmapSource
+                        source160dpi="/assets/images/icons/HelloIcon160.png"
+                        source240dpi="/assets/images/icons/HelloIcon240.png"
+                        source320dpi="/assets/images/icons/HelloIcon320.png"
+                        />
+            </s:source>
+        </s:Image>
+        <s:Label text="  Hello World: {this.currentState.toUpperCase()}" color="white" fontFamily="openSans"/>
+    </s:titleContent>
 
     <fx:Declarations>
         <s:RadioButtonGroup id="genderRBGroup"/>
@@ -170,7 +191,6 @@
                      text.login="Login"
                      text.register="Create an Account"
                      fontSize="42"
-                     paddingLeft="100"
                      paddingBottom="20"/>
 
             <s:Label text="Username or email"
@@ -200,7 +220,7 @@
                          displayAsPassword="true"
                          includeIn="register"/>
 
-            <s:Label text="gender"
+            <s:Label text="Gender"
                      includeIn="register"/>
             <s:HGroup id="genderSelect"
                       includeIn="register">
@@ -221,16 +241,28 @@
                 <s:Label text="agree to terms *"/>
             </s:HGroup>
 
-            <s:Button id="submit_btn"
+            <!--<s:Button id="submit_btn"
                       label="submit"
-                      click="_onSubmitClick( event )"/>
-
-            <s:Label id="loginOrRegisterToggle"
+                      click="_onSubmitClick( event )"/> -->
+           <!-- <s:Label id="loginOrRegisterToggle"
                 text.login="Create Account"
                 text.register="Log In"
                 buttonMode="true" mouseChildren="false"
-                click="_onLoginOrRegisterToggleClick( event )"/>
-
+                click="_onLoginOrRegisterToggleClick( event )"/> -->
+            <!-- The spark button has been replaced with the flatSpark ButtonIcon component in order to fully take advantage
+             of unique attributes. -->
+            <s:VGroup percentWidth="100">
+                <components:ButtonIcon label="Submit" percentWidth="50" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Primary}" click="_onSubmitClick( event )"/>
+                <s:Label text="- OR -" styleName="littleLabel" />
+                <components:ButtonIcon
+                    iconFont="{AwesomeUtils.fa_user}"
+                    label.login="Create Account"
+                    label.register="Log In"
+                    percentWidth="50" left="0" height="{ButtonSizeEnum.Large}"
+                    brand="{BrandColorEnum.Info}"
+                    click="_onLoginOrRegisterToggleClick( event )" />
+                <!-- The icons (via AwesomeUtils) are not loading in my emulation tests. I'm really not sure why yet. -->
+            </s:VGroup>
         </s:VGroup>
 
     </s:Scroller>

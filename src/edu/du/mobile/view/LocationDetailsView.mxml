@@ -4,7 +4,8 @@
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx"
-        creationComplete="_onCreationComplete( event )">
+        creationComplete="_onCreationComplete( event )"
+        >
 
     <fx:Script>
         <![CDATA[
@@ -49,7 +50,19 @@
         }
         ]]>
     </fx:Script>
-
+    <s:titleContent>
+        <s:Image id="helloIconImage" maxHeight="50" maxWidth="50" left="0">
+            <!--Without a max width/height, this was way too big in emulation -->
+            <s:source>
+                <s:MultiDPIBitmapSource
+                        source160dpi="/assets/images/icons/HelloIcon160.png"
+                        source240dpi="/assets/images/icons/HelloIcon240.png"
+                        source320dpi="/assets/images/icons/HelloIcon320.png"
+                        />
+            </s:source>
+        </s:Image>
+        <s:Label text="  Hello World: LOCATION DETAILS" color="white" fontFamily="openSans"/>
+    </s:titleContent>
     <fx:Declarations>
         <mx:PhoneFormatter id="phoneFormatter" formatString="(###) ###-####"/>
     </fx:Declarations>

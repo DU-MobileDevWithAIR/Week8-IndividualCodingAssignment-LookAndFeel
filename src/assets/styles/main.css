@@ -1,7 +1,92 @@
 @namespace s "library://ns.adobe.com/flex/spark";
-/* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+@namespace components "flatSpark.components.*";
+@namespace ns "http://flex.apache.org/experimental/ns";
+/* TO-DONE: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
+/* Dependency is evident in Project Structure */
 
-/* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+/* TO-DONE: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+@font-face {
+    fontFamily: "openSans";
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+    /*  Open Sans created by Steve Matteson and released  with Apache License, version 2.0 */
+    embedAsCFF: true;
+    /*  Per Adobe: "If you set the embedAsCFF property to true, then you can use the advanced
+        formatting features of FTE such as bidirectional text, kerning, and ligatures. " */
+}
+s|Label {
+    fontFamily: "openSans";
+}
+s|List {
+    fontFamily: "openSans";
+}
 
-/* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
-/* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+
+/* TO-DONE: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference -
+https://github.com/akamud/FlatSpark */
+/* Component collection borrowed from all available components list (flatSpark sample on GitHub) */
+
+s|Button {
+    skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
+
+s|TextInput {
+    skinClass: ClassReference("flatSpark.skins.TextInputSkin");
+}
+
+s|CheckBox {
+    skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+}
+
+s|RadioButton {
+    skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+}
+
+s|CheckBox {
+    skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+}
+
+s|RadioButton {
+    skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+}
+
+s|TitleWindow {
+    skinClass: ClassReference("flatSpark.skins.TitleWindowSkin");
+}
+
+s|Panel {
+    skinClass: ClassReference("flatSpark.skins.PanelSkin");
+}
+
+s|ComboBox {
+    skinClass: ClassReference("flatSpark.skins.ComboBoxSkin");
+}
+
+s|DropDownList {
+    skinClass: ClassReference("flatSpark.skins.DropDownListSkin");
+}
+
+ns|ProgressBar {
+    skinClass: ClassReference("flatSpark.skins.ProgressBarSkin");
+}
+
+ns|Alert {
+    skinClass: ClassReference("flatSpark.skins.AlertSkin");
+}
+components|ButtonIcon {
+    skinClass: ClassReference("flatSpark.skins.ButtonIconSkin");
+}
+/* TO-DONE: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/
+WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+/* In use for "- OR -" label in LoginOrRegisterView.mxml */
+.littleLabel {
+    font-style: italic;
+    font-size: 13px;
+}
+
+global
+{
+    fontFamily: "openSans";
+    modal-transparency: 0.85;
+    modal-transparency-blur: 1;
+    modal-transparency-color: #000000;
+}
