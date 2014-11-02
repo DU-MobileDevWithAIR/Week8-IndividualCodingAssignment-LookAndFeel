@@ -138,6 +138,17 @@
 
     <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 -->
 
+    <s:titleContent>
+        <s:Image id="myHelloIconImage">
+            <s:source>
+                <s:MultiDPIBitmapSource
+                        source160dpi="/assets/images/icons/HelloIcon160.png"
+                        source240dpi="/assets/images/icons/HelloIcon240.png"
+                        source320dpi="/assets/images/icons/HelloIcon320.png"/>
+            </s:source>
+        </s:Image>
+    </s:titleContent>
+
     <fx:Declarations>
         <s:RadioButtonGroup id="genderRBGroup"/>
 
