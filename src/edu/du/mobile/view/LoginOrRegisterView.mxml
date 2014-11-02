@@ -164,11 +164,8 @@
             paddingLeft="20" paddingRight="20"/>
     </s:layout>
     <s:actionContent>
-    <s:Image
-            source="{ helloIconSource }"
-            horizontalCenter="0"
-            top="20"
-            height="320" width="320"/>
+    <s:Image source="{ helloIconSource }"
+            horizontalCenter="0"/>
     </s:actionContent>
     <s:Scroller height="100%" width="100%"
         top="20" left="20" right="20">
