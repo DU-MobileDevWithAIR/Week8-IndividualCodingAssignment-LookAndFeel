@@ -26,11 +26,11 @@
 }
 
 s|List {
-    fontFamily: "comfortaaBoldCFF";
+    fontFamily: "comfortaaBold";
 }
 
 s|Label {
-    fontFamily: "comfortaaReg";
+    fontFamily: "comfortaaRegCFF";
 }
 /* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee Done*/
 .titleStyle {
