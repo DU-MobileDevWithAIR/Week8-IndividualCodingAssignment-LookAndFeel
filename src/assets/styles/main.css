@@ -11,6 +11,13 @@
 }
 
 @font-face{
+    src: url("/assets/fonts/Oswald-Regular.ttf");
+    fontFamily: OswaldCFF;
+    font-weight:normal;
+    embedAsCFF:true;
+}
+
+@font-face{
     src: url("/assets/fonts/Oswald-Bold.ttf");
     fontFamily: Oswald;
     font-weight:bold;
@@ -18,10 +25,24 @@
 }
 
 @font-face{
+    src: url("/assets/fonts/Oswald-Bold.ttf");
+    fontFamily: OswaldCFF;
+    font-weight:bold;
+    embedAsCFF:true;
+}
+
+@font-face{
     src: url("/assets/fonts/Oswald-Light.ttf");
     fontFamily: Oswald;
     font-weight:normal;
     embedAsCFF:false;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Light.ttf");
+    fontFamily: OswaldCFF;
+    font-weight:normal;
+    embedAsCFF:true;
 }
 
 global {
