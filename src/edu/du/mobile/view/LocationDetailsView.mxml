@@ -10,10 +10,13 @@
         <![CDATA[
         import edu.du.mobile.model.AppModel;
         import edu.du.mobile.model.vo.Venue;
+        import edu.du.mobile.control.events.NavigationEvent;
+        import edu.du.mobile.model.constants.ApplicationScreens;
 
         import mx.events.FlexEvent;
-
         import mx.utils.ObjectUtil;
+
+        import flatSpark.enums.ButtonSizeEnum;
 
         [Bindable]
         private var _appModel:AppModel = AppModel.getInstance();
@@ -46,6 +49,11 @@
             {
                 _venue.contactPhone = "N/A";
             }
+        }
+
+        private function _onBackClick(event:Event):void
+        {
+            dispatchEvent(new NavigationEvent(NavigationEvent.GOTO_SCREEN, ApplicationScreens.LOCATION_FEED_LIST));
         }
         ]]>
     </fx:Script>
@@ -97,6 +105,15 @@
                 <s:Label text="Directions from Here"
                     color="blue"/>
             </s:HGroup>
+
+            <s:Button id="back_btn"
+                      label="Back"
+                      left="0"
+                      width="98%"
+                      top="15"
+                      horizontalCenter="0"
+                      click="_onBackClick( event )"
+                      height="{ButtonSizeEnum.Large}"/>
 
         </s:VGroup>
 

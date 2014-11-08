@@ -4,7 +4,8 @@
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark"
-        xmlns:popups="edu.du.mobile.view.popups.*" xmlns:mx="library://ns.adobe.com/flex/mx"
+        xmlns:popups="edu.du.mobile.view.popups.*"
+        xmlns:mx="library://ns.adobe.com/flex/mx"
         currentState="register">
 
     <fx:Script>
@@ -15,8 +16,9 @@
         import edu.du.mobile.model.vo.User;
 
         import mx.events.ValidationResultEvent;
-
         import mx.managers.PopUpManager;
+
+        import flatSpark.enums.ButtonSizeEnum;
 
             public static const VIEW_STATE_LOGIN:String = "login";
             public static const VIEW_STATE_REGISTER:String = "register";
@@ -137,6 +139,17 @@
     </fx:Script>
 
     <!-- TODO: Use a MultiDPIBitmapSource to show /assets/images/icons/HelloIcon 160,240,and 320 PNG in an Image in the Title Content area of the ActionBar: http://help.adobe.com/en_US/flex/mobileapps/WSa122979b46197256-7ee474a112a3e1a86b6-8000.html#WS8b1c39bd7e9fc3644ff0b73e12a57855b9c-8000 -->
+    <!-- Override the title content area to insert a MultiDPIBitmapSource image. -->
+    <s:titleContent>
+        <s:Image id="myHelloIconImage">
+            <s:source>
+                <s:MultiDPIBitmapSource
+                        source160dpi="/assets/images/icons/HelloIcon160.png"
+                        source240dpi="/assets/images/icons/HelloIcon240.png"
+                        source320dpi="/assets/images/icons/HelloIcon320.png"/>
+            </s:source>
+        </s:Image>
+    </s:titleContent>
 
     <fx:Declarations>
         <s:RadioButtonGroup id="genderRBGroup"/>
@@ -171,7 +184,8 @@
                      text.register="Create an Account"
                      fontSize="42"
                      paddingLeft="100"
-                     paddingBottom="20"/>
+                     paddingBottom="20"
+                     styleName="headerStyle"/>
 
             <s:Label text="Username or email"
                 includeIn="login"/>
@@ -223,13 +237,16 @@
 
             <s:Button id="submit_btn"
                       label="submit"
-                      click="_onSubmitClick( event )"/>
+                      click="_onSubmitClick( event )"
+                      height="{ButtonSizeEnum.Large}"/>
 
             <s:Label id="loginOrRegisterToggle"
                 text.login="Create Account"
                 text.register="Log In"
-                buttonMode="true" mouseChildren="false"
-                click="_onLoginOrRegisterToggleClick( event )"/>
+                buttonMode="true"
+                mouseChildren="false"
+                click="_onLoginOrRegisterToggleClick( event )"
+                height="{ButtonSizeEnum.Large}"/>
 
         </s:VGroup>
 
