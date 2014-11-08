@@ -4,20 +4,38 @@
 /* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
 @font-face{
     src: url("/assets/fonts/Josefin_Sans/JosefinSans-Regular.ttf");
-    fontFamily: Josefin_Sans;
+    fontFamily: "Josefin_Sans";
     font-weight:normal;
     embedAsCFF:false;
 }
 
 @font-face{
     src: url("/assets/fonts/Josefin_Sans/JosefinSans-SemiBold.ttf");
-    fontFamily: Josefin_Sans;
+    fontFamily: "Josefin_Sans";
     font-weight:bold;
     embedAsCFF:false;
 }
 
+@font-face{
+    src: url("/assets/fonts/Josefin_Sans/JosefinSans-Regular.ttf");
+    fontFamily: "Josefin_SansCFF";
+    font-weight:normal;
+    embedAsCFF:true;
+}
+
+@font-face{
+    src: url("/assets/fonts/Josefin_Sans/JosefinSans-SemiBold.ttf");
+    fontFamily: "Josefin_SansCFF";
+    font-weight:bold;
+    embedAsCFF:true;
+}
+
 global {
-    font-family: Josefin_Sans;
+    font-family: "Josefin_Sans";
+}
+
+s|Label {
+    font-family: "Josefin_SansCFF";
 }
 
 /* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
