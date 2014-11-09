@@ -1,18 +1,32 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 /* DONE: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
 @font-face {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway";
     src: url("/assets/styles/Raleway/Raleway-Regular.ttf");
+    embedAsCFF: false;
+}
+@font-face {
+    font-family: "RalewayCFF";
+    src: url("/assets/styles/Raleway/Raleway-Regular.ttf");
+    embedAsCFF: true;
+}
+
+s|List {
+    fontFamily: "Raleway";
+}
+
+s|Label {
+    fontFamily: "RalewayCFF";
 }
 
 /* DONE: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
 .styleTitle {
-    fontFamily: "Raleway";
+    fontFamily: "RalewayCFF";
     color: blue;
 }
 
 .styleLabel {
-    fontFamily: "Raleway";
+    fontFamily: "RalewayCFF";
 }
 
 /* DONE: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
