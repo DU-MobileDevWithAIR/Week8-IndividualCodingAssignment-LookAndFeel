@@ -1,7 +1,36 @@
 @namespace s "library://ns.adobe.com/flex/spark";
-/* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+/* DONE: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+@font-face {
+    font-family: "Raleway";
+    src: url("/assets/styles/Raleway/Raleway-Regular.ttf");
+    embedAsCFF: false;
+}
+@font-face {
+    font-family: "RalewayCFF";
+    src: url("/assets/styles/Raleway/Raleway-Regular.ttf");
+    embedAsCFF: true;
+}
 
-/* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+s|List {
+    fontFamily: "Raleway";
+}
 
-/* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
-/* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+s|Label {
+    fontFamily: "RalewayCFF";
+}
+
+/* DONE: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+.styleTitle {
+    fontFamily: "RalewayCFF";
+    color: blue;
+}
+
+.styleLabel {
+    fontFamily: "RalewayCFF";
+}
+
+/* DONE: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
+/* DONE: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+s|Button {
+    skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
