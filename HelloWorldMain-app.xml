@@ -126,8 +126,8 @@
 
     <!-- The icon the system uses for the application. For at least one resolution, specify the path to a PNG file included in the AIR package. Optional. -->
     <!-- TODO: Leverage the /assets/images/icons/HelloIcon 29, 40, 58, 60, 76, 80, 152, 160, 512, and 1024 PNG files as application icons below -->
-    <!--<icon>
-        <image16x16></image16x16>-->
+    <icon>
+        <!--<image16x16></image16x16>-->
         <image29x29>assets/images/icons/HelloIcon29.png</image29x29>
     <!--<image32x32></image32x32>
         <image36x36></image36x36>-->
@@ -147,9 +147,9 @@
         <image128x128></image128x128>
         <image144x144></image144x144>-->
         <image152x152>assets/images/icons/HelloIcon152.png</image152x152>
-        <image160x160>assets/images/icons/HelloIcon160.png</image160x160>
+    <!--<image160x160>assets/images/icons/HelloIcon160.png</image160x160>-->
         <image512x512>assets/images/icons/HelloIcon512.png</image512x512>
-     <!--<image732x412></image732x412>-->
+ <!--<image732x412></image732x412>-->
         <image1024x1024>assets/images/icons/HelloIcon1024.png</image1024x1024>
  </icon>
 
