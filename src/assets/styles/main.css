@@ -1,7 +1,32 @@
 @namespace s "library://ns.adobe.com/flex/spark";
-/* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+@namespace components "flatSpark.components.*";
 
-/* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
+/*Refrences the way Kendra embedded for a bit of help here. 11/01/14*/
 
-/* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
-/* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+@font-face {
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+    fontFamily: "Roboto";
+    embedAsCFF: false;
+}
+
+@font-face {
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+    fontFamily: "RobotoCFF";
+    embedAsCFF: true;
+}
+
+s|List {
+    fontFamily: "Roboto";
+}
+
+s|Label {
+    fontFamily: "RobotoCFF";
+}
+
+.Heading {
+     fontFamily: "RobotoCFF";
+     fontSize: 65;
+     color: black;
+}
+
+
