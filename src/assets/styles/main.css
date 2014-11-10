@@ -45,7 +45,7 @@
     embedAsCFF:true;
 }
 
-global {
+.Component {
     font-family: Oswald;
 }
 
