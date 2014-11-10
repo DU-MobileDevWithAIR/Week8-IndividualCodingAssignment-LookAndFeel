@@ -6,6 +6,12 @@
 @font-face {
     src: url("/assets/fonts/Roboto-Bold.ttf");
     fontFamily: "Roboto";
+    embedAsCFF: false;
+}
+
+@font-face {
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+    fontFamily: "RobotoCFF";
     embedAsCFF: true;
 }
 
@@ -13,19 +19,14 @@ s|List {
     fontFamily: "Roboto";
 }
 
+s|Label {
+    fontFamily: "RobotoCFF";
+}
 
 .Heading {
-     fontFamily: "Roboto";
+     fontFamily: "RobotoCFF";
      fontSize: 65;
      color: black;
 }
-
-/*Looked for help on this one and cant seem to figure out why it's throwing me this error.*/
-
-/*s|Button {*/
-     /*skinClass: ClassReference("flatSpark.skins.ButtonSkin");*/
-/*}*/
-
-
 
 
