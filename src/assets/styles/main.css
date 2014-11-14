@@ -13,11 +13,20 @@
     /*  Per Adobe: "If you set the embedAsCFF property to true, then you can use the advanced
         formatting features of FTE such as bidirectional text, kerning, and ligatures. " */
 }
+
+@font-face {
+    fontFamily: "openSans2";
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+    /*  Open Sans created by Steve Matteson and released  with Apache License, version 2.0 */
+    embedAsCFF: false;
+    /*  Per Adobe: "If you set the embedAsCFF property to true, then you can use the advanced
+        formatting features of FTE such as bidirectional text, kerning, and ligatures. " */
+}
 s|Label {
     fontFamily: "openSans";
 }
 s|List {
-    fontFamily: "openSans";
+    fontFamily: "openSans2";
 }
 
 
@@ -81,6 +90,7 @@ WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62
 .littleLabel {
     font-style: italic;
     font-size: 13px;
+    fontFamily: "openSans";
 }
 
 global
