@@ -4,12 +4,30 @@
 -->
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
-    title="Hello World!"
-    applicationComplete="_onApplicationComplete( event )">
-    <!-- TODO: Set the applicationDPI to 320 -->
-    <!-- TODO: Implement a Splashscreen Image -->
+    applicationComplete="_onApplicationComplete( event )"
+    applicationDPI="320"
+    splashScreenImage="@Embed('/assets/images/LaunchImage@3x.png')"
+    splashScreenScaleMode="letterbox"
+    splashScreenMinimumDisplayTime="3000">
+    <fx:Style source="assets/styles/main.css"/>
 
-    <!-- TODO: Use an <fx:Style/> tag to reference /assets/styles/main.css -->
+    <s:titleContent>
+        <s:Image id="helloIconImage" maxHeight="50" maxWidth="50" left="0">
+            <!--Without a max width/height, this was way too big in emulation -->
+            <s:source>
+                <s:MultiDPIBitmapSource
+                        source160dpi="/assets/images/icons/HelloIcon160.png"
+                        source240dpi="/assets/images/icons/HelloIcon240.png"
+                        source320dpi="/assets/images/icons/HelloIcon320.png"
+                        />
+            </s:source>
+        </s:Image>
+        <s:Label text="  Hello World" color="white" fontFamily="openSans"/>
+    </s:titleContent>
+    <!-- TO-DONE: Set the applicationDPI to 320 -->
+    <!-- TO-DONE: Implement a Splashscreen Image -->
+    <!-- TO-DONE: Use an <fx:Style/> tag to reference /assets/styles/main.css -->
+    <!-- Credit time: This implementation was borrowed directly from our sample for the week -->
 
     <fx:Script>
         <![CDATA[
@@ -22,11 +40,8 @@
         import edu.du.mobile.view.LocationDetailsView;
         import edu.du.mobile.view.LocationFeedListView;
         import edu.du.mobile.view.LoginOrRegisterView;
-
         import mx.collections.ArrayCollection;
-
         import mx.events.FlexEvent;
-        import mx.rpc.Fault;
         import mx.rpc.events.FaultEvent;
         import mx.rpc.events.ResultEvent;
         import mx.utils.ObjectUtil;
