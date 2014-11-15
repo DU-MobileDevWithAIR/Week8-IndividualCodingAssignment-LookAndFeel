@@ -5,56 +5,61 @@
 
 @font-face{
     src: url("/assets/fonts/Oswald-Regular.ttf");
-    fontFamily: Oswald;
+    fontFamily: Oswald-Regular;
     font-weight:normal;
     embedAsCFF:false;
 }
 
 @font-face{
     src: url("/assets/fonts/Oswald-Regular.ttf");
-    fontFamily: OswaldCFF;
+    fontFamily: Oswald-RegularCFF;
     font-weight:normal;
     embedAsCFF:true;
 }
 
 @font-face{
     src: url("/assets/fonts/Oswald-Bold.ttf");
-    fontFamily: Oswald;
+    fontFamily: Oswald-Bold;
     font-weight:bold;
     embedAsCFF:false;
 }
 
 @font-face{
     src: url("/assets/fonts/Oswald-Bold.ttf");
-    fontFamily: OswaldCFF;
+    fontFamily: Oswald-BoldCFF;
     font-weight:bold;
     embedAsCFF:true;
 }
 
 @font-face{
     src: url("/assets/fonts/Oswald-Light.ttf");
-    fontFamily: Oswald;
+    fontFamily: Oswald-Light;
     font-weight:normal;
     embedAsCFF:false;
 }
 
 @font-face{
     src: url("/assets/fonts/Oswald-Light.ttf");
-    fontFamily: OswaldCFF;
+    fontFamily: Oswald-LightCFF;
     font-weight:normal;
     embedAsCFF:true;
 }
-
+/*
 .Component {
     font-family: Oswald;
 }
+*/
 
 /* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
 
 .headerStyle {
-    fontSize: 18;
+    fontFamily: Oswald-BoldCFF;
+    fontSize: 40;
     color: #00008b;
-    font-weight:bold;
+}
+
+s|Label {
+    fontFamily: Oswald-RegularCFF;
 }
 
 /* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
