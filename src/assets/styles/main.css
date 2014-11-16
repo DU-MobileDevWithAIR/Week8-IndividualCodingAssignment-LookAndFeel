@@ -1,7 +1,85 @@
 @namespace s "library://ns.adobe.com/flex/spark";
+@namespace components "flatSpark.components.*";
+
 /* TODO: Download a font of your choice from Google Fonts - https://www.google.com/fonts - and use it in the app */
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Regular.ttf");
+    fontFamily: Oswald-Regular;
+    font-weight:normal;
+    embedAsCFF:false;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Regular.ttf");
+    fontFamily: Oswald-RegularCFF;
+    font-weight:normal;
+    embedAsCFF:true;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Bold.ttf");
+    fontFamily: Oswald-Bold;
+    font-weight:bold;
+    embedAsCFF:false;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Bold.ttf");
+    fontFamily: Oswald-BoldCFF;
+    font-weight:bold;
+    embedAsCFF:true;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Light.ttf");
+    fontFamily: Oswald-Light;
+    font-weight:normal;
+    embedAsCFF:false;
+}
+
+@font-face{
+    src: url("/assets/fonts/Oswald-Light.ttf");
+    fontFamily: Oswald-LightCFF;
+    font-weight:normal;
+    embedAsCFF:true;
+}
+/*
+.Component {
+    font-family: Oswald;
+}
+*/
 
 /* TODO: Create a class selector style and use it in the app - http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf62883-7ff2.html#WS2db454920e96a9e51e63e3d11c0bf62883-7fee */
 
+.headerStyle {
+    fontFamily: Oswald-BoldCFF;
+    fontSize: 40;
+    color: #00008b;
+}
+
+s|Label {
+    fontFamily: Oswald-RegularCFF;
+}
+
 /* TODO: Include the libs/FlatSparkSkin.swc as a module library dependency - https://www.jetbrains.com/idea/webhelp/dependencies-tab-2.html */
 /* TODO: Create a style that's used in the app by using one of the skins from FlatSparkSkin as a ClassReference - https://github.com/akamud/FlatSpark */
+
+
+s|Button {
+    skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
+
+s|CheckBox {
+    skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+}
+
+s|RadioButton {
+    skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+}
+
+/* Center image in title content */
+s|ActionBar
+{
+    titleAlign: center;
+}

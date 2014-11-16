@@ -5,11 +5,26 @@
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
     title="Hello World!"
-    applicationComplete="_onApplicationComplete( event )">
+    applicationComplete="_onApplicationComplete( event )"
+    applicationDPI="320"
+    splashScreenImage="@Embed('assets/images/LaunchImage@3x.png')"
+    splashScreenMinimumDisplayTime="10000"
+    splashScreenScaleMode="letterbox">
+
     <!-- TODO: Set the applicationDPI to 320 -->
     <!-- TODO: Implement a Splashscreen Image -->
 
     <!-- TODO: Use an <fx:Style/> tag to reference /assets/styles/main.css -->
+
+    <fx:Style source="/assets/styles/main.css"/>
+
+    <s:titleContent>
+        <s:Image id="myHelloIconImage"
+                 source="/assets/images/icons/HelloIcon60.png" />
+        <s:Label id="helloWorldTitleLabel"
+                 text="Hello World"
+                 color="white" />
+    </s:titleContent>
 
     <fx:Script>
         <![CDATA[
