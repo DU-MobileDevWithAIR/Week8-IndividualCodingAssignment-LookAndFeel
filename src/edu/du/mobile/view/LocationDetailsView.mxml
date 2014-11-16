@@ -66,11 +66,11 @@
 
         <s:VGroup >
 
-            <s:Label text="{ _venue.name }"
+            <s:Label text="{ _venue.name }" styleName="headerStyle"
                      width="80%"/>
 
             <s:HGroup>
-                <s:Label text="Map"
+                <s:Label text="Map" styleName="headerStyle"
                    color="blue"
                    paddingLeft="25"/>
 
